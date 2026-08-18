@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-collection",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://ocw.mit.edu/",
+    "originPage": "OCW homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "collection-pills",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "linked category label per card (no image)",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Discover Collections pill-style category link groups",
+      "compact rows of text-only linked tags/topics"
+    ],
+    "notSuitableFor": [
+      "cards with images (use cards-course/cards-news/cards-story)",
+      "long-form descriptive cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-17T00:00:00.000Z"
+  }
+}

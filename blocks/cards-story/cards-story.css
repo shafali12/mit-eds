@@ -1,0 +1,157 @@
+/* Block: cards-story -- OCW OpenCourseWare Stories slider */
+
+.cards-story {
+  --cards-story-gap: 24px;
+  --cards-story-per-view: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* clipping window that reveals one page of cards */
+.cards-story-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.cards-story-viewport > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--cards-story-gap);
+  transition: transform 0.4s ease;
+}
+
+.cards-story-viewport > ul > li {
+  /* each card fills 1/perView of the viewport (minus shared gap) */
+  flex: 0 0 calc((100% - (var(--cards-story-per-view) - 1) * var(--cards-story-gap)) / var(--cards-story-per-view));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid rgb(223 229 236);
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgb(120 169 197 / 15%) 0 2px 10px 0;
+  overflow: hidden;
+}
+
+/* prev / next arrows */
+.cards-story-arrow {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #000;
+  font-size: 40px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cards-story-arrow::before {
+  display: block;
+}
+
+.cards-story-prev::before { content: '\2039'; }
+.cards-story-next::before { content: '\203a'; }
+
+.cards-story-arrow:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* portrait image -- 16:9 crop, rounded */
+.cards-story .cards-story-card-image {
+  line-height: 0;
+  margin-bottom: 20px;
+}
+
+.cards-story .cards-story-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* text region */
+.cards-story .cards-story-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  padding: 0 20px 10px;
+}
+
+.cards-story .cards-story-card-body > * {
+  margin: 0;
+}
+
+/* name */
+.cards-story .cards-story-name {
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.cards-story .cards-story-name a:any-link {
+  color: #000;
+  text-decoration: none;
+}
+
+/* occupation / location row */
+.cards-story .cards-story-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: rgb(15 15 15);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* excerpt -- clamped to 5 lines */
+.cards-story .cards-story-excerpt {
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+/* Read Full Story call-to-action */
+.cards-story .cards-story-cta {
+  margin-top: auto;
+}
+
+.cards-story .cards-story-cta a:any-link {
+  color: var(--link-color);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cards-story .cards-story-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (width >= 600px) {
+  .cards-story {
+    --cards-story-per-view: 2;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-story {
+    --cards-story-gap: 30px;
+    --cards-story-per-view: 3;
+  }
+}

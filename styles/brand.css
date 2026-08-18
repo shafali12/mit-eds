@@ -1,0 +1,31 @@
+:root {
+  /* Fonts — OCW uses system Helvetica, no web font import required */
+  --heading-font-family: helvetica, arial, sans-serif;
+  --body-font-family: helvetica, arial, sans-serif;
+
+  /* Core colors */
+  --background-color: #fff;
+  --text-color: #212529;
+  --heading-color: #000;
+  --link-color: #0a3e56;
+  --link-hover-color: #a31f34;
+
+  /* Brand palette */
+  --brand-red: #a31f34;
+  --brand-teal: #126f9a;
+  --brand-dark-navy: #03152d;
+  --brand-light-panel: #f6f7f9;
+
+  /* Spacing */
+  --section-padding: 48px;
+  --nav-height: 50px;
+  --content-max-width: 1280px;
+
+  /* Heading sizes (desktop) */
+  --heading-size-xxl: 36px;
+  --heading-size-xl: 28px;
+  --heading-size-l: 22px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+}

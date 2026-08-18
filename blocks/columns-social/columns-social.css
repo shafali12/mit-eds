@@ -1,0 +1,141 @@
+/* Block: columns-social — social links + newsletter, two white cards on teal section */
+
+/* Row: the two cards. Mobile-first single column. */
+.columns-social > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Each card */
+.columns-social > div > div {
+  flex: 1;
+  border: 1px solid rgb(156 157 158);
+  border-radius: 5px;
+  background-color: #fff;
+  color: var(--text-color);
+  padding: 24px;
+}
+
+/* Card titles (STAY CONNECTED..., SUBSCRIBE...) */
+.columns-social .columns-social-title {
+  margin: 0 0 8px;
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+/* Left card: social links centered */
+.columns-social .columns-social-connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Social icon row */
+.columns-social .columns-social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
+}
+
+.columns-social .columns-social-icons p {
+  margin: 0;
+}
+
+/* social glyph SVGs are white; source renders them as teal circles */
+.columns-social .columns-social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--brand-teal);
+}
+
+.columns-social .columns-social-icons img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+/* Right card: newsletter */
+.columns-social .columns-social-subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inline form: email field + signup button */
+.columns-social .columns-social-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 12px;
+  margin: 0;
+}
+
+/* Email field cell (envelope icon + link/placeholder), boxed */
+.columns-social .columns-social-email {
+  display: flex;
+  flex: 1 1 200px;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  border: 1px solid rgb(156 157 158);
+  background-color: #fff;
+  padding: 6px 12px;
+  color: rgb(73 80 87);
+}
+
+.columns-social .columns-social-email img {
+  width: 24px;
+  height: 24px;
+}
+
+.columns-social .columns-social-email a:any-link {
+  color: rgb(73 80 87);
+  font-size: 16px;
+}
+
+/* Red SIGN ME UP button */
+.columns-social .columns-social-signup {
+  display: flex;
+  margin: 0;
+}
+
+.columns-social .columns-social-signup a:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background-color: var(--brand-red);
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.columns-social .columns-social-signup a:hover {
+  background-color: #7f1728;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Desktop: two cards side by side */
+@media (width >= 900px) {
+  .columns-social > div {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .columns-social > div > div {
+    padding: 24px 48px;
+  }
+}

@@ -1,0 +1,169 @@
+/* Block: cards-news — OCW News (featured story + sidebar list)
+   Values extracted from source computed styles at https://ocw.mit.edu/ */
+
+.cards-news .cards-news-main-heading,
+.cards-news > h2:first-child {
+  margin: 0 0 8px;
+  font-size: 22.4px;
+  font-weight: 600;
+  line-height: 25.6px;
+  color: var(--heading-color);
+}
+
+/* Two-column container: featured (left) + sidebar (right) */
+.cards-news .cards-news-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* --- Featured story --- */
+.cards-news .cards-news-featured {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+}
+
+.cards-news .cards-news-featured picture,
+.cards-news .cards-news-featured img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards-news .cards-news-featured img {
+  min-height: 260px;
+  aspect-ratio: 16 / 11;
+}
+
+.cards-news .cards-news-overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  background-color: rgb(3 21 45 / 80%);
+}
+
+.cards-news .cards-news-date {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #fff;
+}
+
+.cards-news .cards-news-heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.24;
+  color: #fff;
+}
+
+/* --- Sidebar list --- */
+.cards-news .cards-news-sidebar {
+  display: block;
+  padding: 20px 0 0;
+  background-color: var(--background-color);
+}
+
+.cards-news .cards-news-item {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 20px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.cards-news .cards-news-item:last-child {
+  margin-bottom: 0;
+}
+
+.cards-news .cards-news-thumb,
+.cards-news .cards-news-thumb img {
+  flex: 0 0 auto;
+  width: 168px;
+  height: 94px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.cards-news .cards-news-thumb {
+  margin-right: 10px;
+}
+
+.cards-news .cards-news-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-news .cards-news-item-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--text-color);
+}
+
+.cards-news .cards-news-item:hover .cards-news-item-title {
+  color: var(--link-hover-color);
+}
+
+.cards-news .cards-news-item-date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgb(33 37 41 / 60%);
+}
+
+/* --- View all footer --- */
+.cards-news .cards-news-footer {
+  display: flex;
+  padding: 24px 0;
+}
+
+.cards-news .cards-news-footer a:any-link {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--brand-teal);
+  text-decoration: underline;
+}
+
+/* --- Desktop: side-by-side featured + sidebar --- */
+@media (width >= 900px) {
+  .cards-news .cards-news-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .cards-news .cards-news-featured {
+    flex: 0 0 58.4%;
+    max-width: 58.4%;
+  }
+
+  .cards-news .cards-news-featured img {
+    aspect-ratio: auto;
+    min-height: 500px;
+  }
+
+  .cards-news .cards-news-overlay {
+    padding: 40px 50px;
+  }
+
+  .cards-news .cards-news-heading {
+    font-size: 30px;
+    line-height: 37.2px;
+  }
+
+  .cards-news .cards-news-sidebar {
+    flex: 1 1 auto;
+    padding: 30px;
+  }
+}

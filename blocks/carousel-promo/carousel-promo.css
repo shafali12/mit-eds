@@ -1,0 +1,227 @@
+/* carousel-promo -- card-style promo carousel migrated from ocw.mit.edu #promo-carousel
+ * Design (from source computed styles): centered white card (image left + text right),
+ * grey chevron arrows at the far edges, small grey dot indicators below.
+ */
+
+.carousel-promo {
+  padding: 8px 0 0;
+  margin: 0 0 30px;
+}
+
+.carousel-promo .carousel-promo-slides-container {
+  position: relative;
+}
+
+/* horizontal scroll track */
+.carousel-promo .carousel-promo-slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: scroll clip;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-promo .carousel-promo-slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* each slide = one centered white card */
+.carousel-promo .carousel-promo-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 60px 16px;
+  background-color: #fff;
+}
+
+/* image column */
+.carousel-promo .carousel-promo-slide-image {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 320px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.carousel-promo .carousel-promo-slide-image picture {
+  display: block;
+}
+
+.carousel-promo .carousel-promo-slide-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* text column */
+.carousel-promo .carousel-promo-slide-content {
+  flex: 0 1 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.carousel-promo .carousel-promo-slide-content h2 {
+  margin: 0 0 8px;
+  color: #000;
+  font-size: 22.4px;
+  font-weight: 600;
+  line-height: 25.6px;
+}
+
+.carousel-promo .carousel-promo-slide-content h3 {
+  margin: 0 0 8px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+/* the promo link authored as <p><a> -- EDS decorates it as a button; reset to a plain bold underlined link */
+.carousel-promo .carousel-promo-slide-content .button-container {
+  margin: 8px 0 0;
+}
+
+.carousel-promo .carousel-promo-slide-content a,
+.carousel-promo .carousel-promo-slide-content a.button:any-link {
+  display: inline;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: #000;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: underline;
+  white-space: normal;
+  overflow: visible;
+}
+
+.carousel-promo .carousel-promo-slide-content a:hover,
+.carousel-promo .carousel-promo-slide-content a.button:any-link:hover {
+  color: var(--link-hover-color);
+}
+
+/* edge navigation arrows -- grey chevrons on white */
+.carousel-promo .carousel-promo-navigation-buttons {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.carousel-promo .carousel-promo-navigation-buttons button {
+  position: relative;
+  width: 60px;
+  height: 67px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.carousel-promo .carousel-promo-navigation-buttons button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #3d3d3d;
+  border-bottom: 0;
+  border-left: 0;
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+.carousel-promo .carousel-promo-navigation-buttons button.slide-next::after {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+.carousel-promo .carousel-promo-navigation-buttons button:hover::after,
+.carousel-promo .carousel-promo-navigation-buttons button:focus-visible::after {
+  border-color: #000;
+}
+
+/* dot indicators below the card */
+.carousel-promo .carousel-promo-slide-indicators {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-promo .carousel-promo-slide-indicator {
+  margin: 10px 3px;
+  line-height: 0;
+}
+
+.carousel-promo .carousel-promo-slide-indicator button {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #dee2e6;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.carousel-promo .carousel-promo-slide-indicator button:hover,
+.carousel-promo .carousel-promo-slide-indicator button:focus-visible {
+  opacity: 0.75;
+}
+
+.carousel-promo .carousel-promo-slide-indicator button:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* desktop: image left, text right, card centered at max 900px */
+@media (width >= 900px) {
+  .carousel-promo .carousel-promo-slide {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 8px 60px 16px;
+  }
+
+  .carousel-promo .carousel-promo-slide-image {
+    flex: 0 0 270px;
+    width: 270px;
+    max-width: 270px;
+    height: 159px;
+  }
+
+  .carousel-promo .carousel-promo-slide-image img {
+    height: 159px;
+  }
+
+  .carousel-promo .carousel-promo-slide-content {
+    flex: 0 1 630px;
+    text-align: left;
+  }
+}

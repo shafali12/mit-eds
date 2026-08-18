@@ -1,0 +1,128 @@
+/* Block: hero-home -- CSS extracted from source computed styles (ocw.mit.edu home-banner) */
+
+/* Full-width: override the section's max-width wrapper */
+.hero-home-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.hero-home {
+  background-image: url("https://ocw.mit.edu/images/homepage_hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(33 37 41);
+}
+
+/* row wrapper produced by EDS */
+.hero-home > div {
+  margin: 0;
+  padding: 0;
+}
+
+/* inner two-column container (.banner-contents-container) */
+.hero-home .hero-home-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* ------- Left column: prompt + search + quick links ------- */
+.hero-home .hero-home-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-home .hero-home-left p {
+  color: #fff;
+  margin: 4px 0;
+}
+
+/* quick links (Get Started / Educators) light-blue underlined */
+.hero-home .hero-home-left a:any-link {
+  color: rgb(50 197 255);
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* ------- Right column: teal panel with headline + mission ------- */
+.hero-home .hero-home-right {
+  background-color: rgb(18 111 154 / 65%);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.hero-home .hero-home-right h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 22.4px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.hero-home .hero-home-right p {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* "Discover courses, materials, & teaching resources" prompt */
+.hero-home .hero-home-left > p:first-child {
+  margin: 0 0 12px;
+  font-weight: 700;
+}
+
+/* mission link: white, bold, underlined */
+.hero-home .hero-home-right a:any-link {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* fallback when no background image loads */
+.hero-home.no-image {
+  background-color: var(--dark-color);
+}
+
+/* ------- Desktop layout ------- */
+@media (width >= 900px) {
+  .hero-home {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-home .hero-home-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+  }
+
+  .hero-home .hero-home-left {
+    max-width: 550px;
+  }
+
+  .hero-home .hero-home-right {
+    max-width: 550px;
+    padding: 24px 64px;
+    margin: 8px 0;
+  }
+
+  .hero-home .hero-home-right h2 {
+    line-height: 40px;
+  }
+
+  .hero-home .hero-home-right p {
+    line-height: 19px;
+  }
+}

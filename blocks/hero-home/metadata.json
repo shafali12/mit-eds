@@ -1,0 +1,37 @@
+{
+  "variantName": "hero-home",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-08-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://ocw.mit.edu/",
+    "originPage": "OCW homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "home-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + intro text + search + supporting links + mission callout",
+    "buttonCount": 3,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "site landing pages",
+      "homepage top banner with full-bleed background image and overlaid content"
+    ],
+    "notSuitableFor": [
+      "text-only intros",
+      "interior pages without a background image"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-17T00:00:00.000Z"
+  }
+}
