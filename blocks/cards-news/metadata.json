@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://ocw.mit.edu/",
+    "originPage": "OCW homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "news-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "one row per news item (image + linked headline + date); first row renders as large featured card with dark-navy overlay, remaining rows render as sidebar thumbnails; trailing imageless row renders as 'view all' footer link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "OCW News featured story + secondary news items",
+      "news/article cards with image, date, and linked headline"
+    ],
+    "notSuitableFor": [
+      "course listing cards (use cards-course)",
+      "text-only pill links (use cards-collection)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-17T00:00:00.000Z"
+  }
+}

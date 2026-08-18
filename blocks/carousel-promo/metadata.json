@@ -1,0 +1,37 @@
+{
+  "variantName": "carousel-promo",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-08-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://ocw.mit.edu/",
+    "originPage": "OCW homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "promo-carousel",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + subheading + CTA per slide",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage promotional highlights",
+      "rotating announcement banners with image + headline + CTA"
+    ],
+    "notSuitableFor": [
+      "single static banner (use hero)",
+      "image-only galleries without text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-17T00:00:00.000Z"
+  }
+}

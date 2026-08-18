@@ -1,0 +1,37 @@
+{
+  "variantName": "columns-social",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://ocw.mit.edu/",
+    "originPage": "OCW homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "wide",
+    "purpose": "social-newsletter",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "two columns: left = heading + social icon links; right = heading + newsletter signup",
+    "buttonCount": 1,
+    "imageCount": 7
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "Stay Connected + Newsletter two-up panel",
+      "side-by-side promotional/utility panels on an accent background"
+    ],
+    "notSuitableFor": [
+      "repeating card grids (use cards variants)",
+      "single-column content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-17T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "variantName": "cards-story",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-17T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://ocw.mit.edu/",
+    "originPage": "OCW homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "story-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "portrait image + name + location + excerpt + 'Read Full Story' CTA per card",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "OpenCourseWare Stories testimonial cards",
+      "profile/testimonial cards with image, name, excerpt, and CTA"
+    ],
+    "notSuitableFor": [
+      "course listing cards (use cards-course)",
+      "news cards (use cards-news)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-17T00:00:00.000Z"
+  }
+}
